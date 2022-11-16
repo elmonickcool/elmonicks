@@ -1,0 +1,17 @@
+#register{
+	color:red;
+	font-weight: 400;
+}
+#register:hover{
+	color:blue;
+}
+
+.btn{
+	color:blue;
+	size: 500px;
+	border-radius: 900%;
+}
+.btn:hover{
+	color:red;
+	border:5px solid blue;
+}

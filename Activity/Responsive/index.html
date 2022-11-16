@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.flex-container{
+			display: flex;
+			height: 200px;
+			align-items: center;
+			justify-content: center;
+		}
+		.site-header{
+			display: flex;
+			align-items: center;
+			background-color: rgb(97, 235, 97);
+			width: auto;
+			height: 150px;
+			justify-content: center;
+		}
+		nav{
+			display: flex;
+			background-color: gray;
+		}
+		li{
+			display: inline;
+			color:white;
+		}
+		@media only screen and (min-width:320px) and (max-width: 425px)  {
+		.h2L {/**Phone**/
+		background-color: red;
+		}
+		}
+		@media only screen and(min-width:426px) and (max-width: 768px) {
+		.h2LB {/**Tablet**/
+		background-color: blue;
+		}
+		}
+		@media only screen and (min-width:769px) and (max-width: 1024px) {
+		h2 {
+			/**Laptop**/
+		background-color: orange;
+		}
+		}
+
+	</style>
+</head>
+<body>
+	<header class="site-header">
+		<h1 style="text-align:center;">Online Magazine</h1>
+	</header>
+	<nav>
+		<ul>
+			<li>home</li>
+			<li>about</li>
+			<li>contact</li>
+		</ul>
+	</nav>
+	
+		<article>
+			<h2>Lifestyle</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quisquam non natus numquam itaque repellendus fuga illum, provident nemo officiis omnis accusantium eveniet similique perferendis id exercitationem? Optio, aliquam. Non.</p>
+		</article>
+		<article>
+			<h2>Business</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quisquam non natus numquam itaque repellendus fuga illum, provident nemo officiis omnis accusantium eveniet similique perferendis id exercitationem? Optio, aliquam. Non.</p>
+		</article>
+		<article>
+			<h2>Sports</h2>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut quisquam non natus numquam itaque repellendus fuga illum, provident nemo officiis omnis accusantium eveniet similique perferendis id exercitationem? Optio, aliquam. Non.</p>
+		</article>
+		
+	
+</body>
+</html>

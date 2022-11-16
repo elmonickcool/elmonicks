@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/69382d38a9.js" crossorigin="anonymous"></script>
+	<style>body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}</style>
+</head>
+
+<body class="bg-dark text-white">
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#"><i class="fa fa-burger"></i></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav">
+		      <a class="nav-link active" aria-current="page" href="#">Home</a>
+		      <a class="nav-link" href="#">Features</a>
+		      <a class="nav-link" href="#">Menu</a>
+		      <a class="nav-link" href="#">About us</a>
+		    </div>
+		  </div>
+		</div>
+	</nav>
+	
+		<div class="hero-image">
+  <div class="hero-text">
+    <h1><i class="fa fa-burger text-warning"></i>Bryl's Burger</h1>
+    <p>We are a burger restaurant based in Bonifacio High Street, Taguig which offers affordable yet satisfying, juicy, and lip-smacking burgers. It’s just beef, cheese and onions; no sauce or any other veggies. The steam from the juices of the beef and onions is locked into the buns. It’s just pure, in a burger sense. We're open Tuesdays to Sundays from 1:00 PM to 2:00 AM.</p>
+    
+  </div>
+</div>
+		
+		<div class="container">
+			<h1 class="text-center">Features</h1>
+        				<div class="row">
+						<div class="col">
+							<div class="card" style="width:18rem;" >
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIjVV7X98gIkO0WlcfXYZ0L_wKqzMG9p0NjA&usqp=CAU" class="card-img-top" alt="...">
+								<div class="card-body bg-light text-dark md-5">
+									<h5 class="card-title">Products</h5>
+									<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque perspiciatis sed, consequuntur iure maiores ullam cumque architecto aliquam eveniet labore in, et vitae adipisci modi? In architecto earum dolores laboriosam!</p>
+									<a href="#" class="btn btn-success">Explore Products</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card" style="width: 18rem;">
+								<img src="https://img.lovepik.com/desgin_photo/45007/8872_detail.jpg!wh650" class="card-img-top" alt="...">
+								<div class="card-body bg-light text-dark md-5">
+									<h5 class="card-title">Promo</h5>
+									<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque perspiciatis sed, consequuntur iure maiores ullam cumque architecto aliquam eveniet labore in, et vitae adipisci modi? In architecto earum dolores laboriosam!</p>
+									<a href="#" class="btn btn-warning">See all promo</a>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card" style="width: 18rem;">
+								<img src="https://www.rappler.com/tachyon/2020/12/130080395_10158965954964106_3480682352622911093_n.png" class="card-img-top" alt="...">
+								<div class="card-body bg-light text-dark md-5">
+									<h5 class="card-title">Rewards</h5>
+									<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque perspiciatis sed, consequuntur iure maiores ullam cumque architecto aliquam eveniet labore in, et vitae adipisci modi? In architecto earum dolores laboriosam!</p>
+									<a href="#" class="btn btn-danger">Redeem Rewards</a>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+	</div>
+	<footer class="d-flex flex-wrap justify-content-between align-items-center bg-warning py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted"><i class="fa fa-phone"></i><strong>09123456789</strong></span>
+      <span class="mb-3 mb-md-0 text-muted"><i class="fa fa-store"></i><strong>Bonifacio High Street, Taguig City</strong></span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
