@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ 	.pointsBtn{
+    	background: red;
+        color:white;
+        padding: 20px;
+        border-radius: 100%;
+        display:block;
+        position:absolute;
+    }
+ </style>
+
+</head>
+<body>
+
+<h1>Points Ranking Demo Game</h1>
+<h2>Click the button to increase your points.</h2>
+<hr>
+
+<p>Current points: <span id="points">0</span></p>
+<p>Current rank: <span id="rank">Iron</span></p>
+
+<marquee><button id="redCircle" class="pointsBtn" onclick="addPoints()">+</button></marquee>
+
+
+<script>
+
+// Conditional Statements
+let points = 0;
+let rank = "Iron";
+
+function addPoints(){
+
+	let x = Math.floor(Math.random()*500) + 1;
+    let y = Math.floor(Math.random()*500) + 1;
+	document.getElementById('redCircle').style.left = x+"px";
+	document.getElementById('redCircle').style.top = y+"px";
+    
+    points += 5;
+    
+    document.getElementById('points').innerHTML = points;
+    
+    if(points >= 100 && points < 300){
+	rank = "Bronze";
+    } else if(points >= 300 && points < 500){
+        rank = "Silver";
+    } else if(points >= 500 && points < 1000){
+        rank = "Gold";
+    } else if(points >= 1000){
+        rank = "Platinum";
+    } else{
+        rank = "Unranked";
+    }
+    
+    document.getElementById('rank').innerHTML = rank;
+}
+
+</script>
+
+</body>
+</html>
