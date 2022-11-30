@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <style> input[type=checkbox]:checked + label.strikethrough{
+        text-decoration: line-through;
+}</style>
+</head>
+<body>
+    
+    <div class="container m-5 p-5">
+        <div class="row">
+            <div class="mx-auto col-5 border rounded shadow-lg p-5">
+                <h3 class="text-center">📝 To-do List</h3>
+                <hr>
+                <ul class="list-group" id="todoList">
+                  </ul>
+                  <hr>
+                <input id="todoInput" type="text" class="form-control">
+                <div class="text-center d-grid">
+                    <button class="mt-2 btn btn-dark" onclick="addTodo()">+ Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addTodo(){
+            let newTodo = document.getElementById("todoInput").value;
+            if(newTodo != ""){
+                document.getElementById("todoList").innerHTML += '<li class="list-group-item">' + newTodo + '<button style="float:right;" type="button" class="btn-close" onclick="closeList()" aria-label="Close"></button>'+'<input style="float:right;" class="form-check-input md-5" type="checkbox" id="strike" value="1"><label for="strike" class="strikethrough">'+newTodo+'</label>';
+                document.getElementById("todoInput").value = "";
+            }
+        }
+    function closeList(){
+        const x= document.getElementById("todoList");
+        x.removeChild(x.firstElementChild);
+    }
+      function strikeText(){
+        const x= document.getElementById("todoList");
+        x.strike(x.firstElementChild);
+    }
+    </script>
+</body>
+</html>

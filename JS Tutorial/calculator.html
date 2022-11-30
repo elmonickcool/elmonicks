@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container m-5 p-5">
+      
+        <div class="row">
+            <div class="mx-auto col-5 p-5 border rounded shadow-lg m-5 text-end">
+                <h1 id="displayArea">0</h1>
+                <hr />
+                <div class="row">
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(7)">7</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(8)">8</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(9)">9</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-primary" onclick="calculate('addition')">+</button>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(4)">4</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(5)">5</button>
+                    </div>
+          
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(6)">6</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-primary" onclick="calculate('subtraction')">-</button>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(1)">1</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(2)">2</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(3)">3</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-primary" onclick="calculate('multiplication')">*</button>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-dark" onclick="inputNumber(0)">0</button>
+                    </div>
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-danger" onclick="clearDisplayArea()">
+                        C
+                      </button>
+                    </div>
+          
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-success" onclick="equals()">=</button>
+                    </div>
+          
+                    <div class="col-3 d-grid">
+                      <button class="btn btn-primary" onclick="calculate('division')">/</button>
+                    </div>
+                  </div>
+            </div>
+            <h1 id="tempval"></h1>
+        </div>
+    </div>
+    <script>
+      let currentDisplay = "";
+      let temp = 0;
+      let operator = "";
+
+      function inputNumber(x){
+          currentDisplay += x;
+          document.getElementById("displayArea").innerText = currentDisplay;
+      }
+
+      function clearDisplayArea(){
+          currentDisplay = "";
+          document.getElementById("displayArea").innerText = "0";
+      }
+
+      function calculate(operation){
+        operator = operation;
+        temp = currentDisplay;
+        currentDisplay = "";
+      }
+
+      function equals(){
+        if(operator === "addition"){
+            temp = parseInt(temp) + parseInt(currentDisplay);
+        }else if(operator === "subtraction"){
+            temp = parseInt(temp) - parseInt(currentDisplay);
+        }else if(operator === "multiplication"){
+            temp = parseInt(temp) * parseInt(currentDisplay);
+        }else if(operator === "division"){
+            temp = parseInt(temp) / parseInt(currentDisplay);
+        }
+        document.getElementById("displayArea").innerText = temp;
+      }
+
+    </script>
+  </body>
+</html>
