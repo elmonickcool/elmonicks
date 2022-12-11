@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	 <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+	<div class="container">
+		<h1>Movies</h1>
+		<hr>
+		<div class="row" id="movieList">
+			
+		</div>
+	</div>
+	<script>
+		const jsonMovie=`{
+			"list":[
+			{
+			"Title": "Avatar",
+			"Year": "2009",
+			"Rated": "PG-13",
+			"Released": "18 Dec 2009",
+			"Runtime": "162 min",
+			"Genre": "Action, Adventure, Fantasy",
+			"Director": "James Cameron",
+			"Images":  "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
+		},
+		{
+			"Title": "300",
+			"Year": "2006",
+			"Rated": "R",
+			"Released": "09 Mar 2007",
+			"Runtime": "117 min",
+			"Genre": "Action, Drama, Fantasy",
+			"Director": "Zack Snyder",
+			"Images": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwNTg5MzMwMV5BMl5BanBnXkFtZTcwMzA2NTIyMw@@._V1_SX1777_CR0,0,1777,937_AL_.jpg"
+		}
+		]
+	}`;
+
+		const list = JSON.parse(jsonMovie).list;
+
+		for(let listing of list){
+			console.log(listing);
+			document.getElementById("movieList").innerHTML +=
+			 `
+			<div class="col-md-4">
+			<div class="card" style="width: 18rem">
+			<img src="${listing.Images}" class="card-img-top" alt="..." />
+			<div class="card-body">
+			<h5 class="card-title">${listing.Title}</h5>
+			<small>– ${listing.Director}</small>
+			<p class="mt-2 card-text">
+				${listing.Genre}
+			</p>
+			<i><small>${listing.Year}</small></i>
+			</div>
+			</div>
+			</div>
+			`
+		}
+	</script>
+</body>
+</html>
